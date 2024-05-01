@@ -1,0 +1,20 @@
+name: gestion
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Create directory
+      run: mkdir new_folder
+    - name: Zip files
+      run: |
+        zip -r new_folder.zip new_folder
+
+         
