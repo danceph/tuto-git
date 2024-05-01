@@ -13,8 +13,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Create directory
       run: mkdir new_folder
+    - name: Display directory contents
+      run: ls -l new_folder
     - name: Zip files
       run: |
         zip -r new_folder.zip new_folder
-
-         
